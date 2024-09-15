@@ -363,18 +363,18 @@ dark:ring-offset-neutral-800
         </p>
       </div>
       <div class="flex flex-wrap justify-center
-    gap-8
-    gap-x-16
-    max-m-2xl
-    mx-auto
-    ">
+      gap-8
+      gap-x-16
+      max-m-2xl
+      mx-auto
+      ">
         <div class="p-4
-  bg-white
-  dark:bg-neutral-600
-  shadow-md
-  dark:shadow-xl
-  rounded-md
-  ">
+    bg-white
+    dark:bg-neutral-600
+      shadow-md
+      dark:shadow-xl
+      rounded-md
+      ">
           <img src="assets/partner1.svg" alt="" class="h-16 w-16">
 
         </div>
@@ -440,8 +440,8 @@ dark:ring-offset-neutral-800
           gap-2">
             <h2 class="text-4xl font-bold">Relax, you're home!</h2>
             <p class="max-w-md">
-              All our supported 
-              hardware includes traditional inputs so you 
+              All our supported
+              hardware includes traditional inputs so you
               can integrate our products into your house
               in a way that's
               best for everyone.
@@ -485,7 +485,7 @@ dark:ring-offset-neutral-800
     lg:w-96
     xl:max-w-lg
     "></div>
-    <div class="
+      <div class="
     bg-teal-900
     h-24
     xl:h-48
@@ -510,36 +510,35 @@ dark:ring-offset-neutral-800
       relative
       ">
           <img src="assets/lamp.png" alt="lamp" class="
-      mx-auto
+      mx-auto 
       ">
           <a href="" class="
       py-2
       px-6
       bg-amber-400
     dark:text-neutral-900
-    w-max
-    mx-auto
-    mt-12
-    md:mb-12
-    flex
-    gap-2
-    shadow-xl 
-    hover:shadow-none 
-    transition-shadow
+      w-max
+      mx-auto
+      mt-12
+      md:mb-12
+      flex
+      gap-2
+      shadow-xl 
+      hover:shadow-none 
+      transition-shadow
       focus:outline-none
-    focus-visible:ring-4
-    ring-neutral-900
-    rounded-md
-    ring-offset-4
-    ring-offset-transparent
-    ring-offset-white
-    dark:ring-amber-400
-    dark:ring-offset-neutral-800
-      ">
+      focus-visible:ring-4
+      ring-neutral-900
+      rounded-md
+      ring-offset-4
+      ring-offset-transparent
+      ring-offset-white
+      dark:ring-amber-400
+      dark:ring-offset-neutral-800
+        ">
             Download The app
           </a>
-          <img src="assets/app.svg" alt="app" 
-          width="240" class="
+          <img src="assets/app.svg" alt="app" width="240" class="
           hidden
           md:block
           drop-shadow-xl
@@ -594,14 +593,13 @@ dark:ring-offset-neutral-800
         font-bold
         uppercase
         absolute
-        
         -translate-y-1/2
         transition-all
         peer-placeholder-shown:left-4
         peer-placeholder-shown:top-1/2
         peer-placeholder-shown:text-neutral-900
         peer-focus:-top-4
-        peer-focus:-left-4
+        peer-focus:-left-2
         peer-focus:text-neutral-600
         dark:peer-focus:text-neutral-300
         ">Your Name</label>
@@ -630,15 +628,13 @@ dark:ring-offset-neutral-800
         font-bold
         uppercase
         absolute
-        -top-4
-        left-2
         -translate-y-1/2
         transition-all
-        peer-placeholder-shown:left-6
+        peer-placeholder-shown:left-4
         peer-placeholder-shown:top-6
         peer-placeholder-shown:text-neutral-900
         peer-focus:-top-4
-        peer-focus:-left-4
+        peer-focus:-left-2
         peer-focus:text-neutral-600
         dark:peer-focus:text-neutral-300
         ">Your Email</label>
@@ -668,15 +664,13 @@ dark:ring-offset-neutral-800
         font-bold
         uppercase
         absolute
-        -top-3
-        left-2
         -translate-y-1/2
         transition-all
         peer-placeholder-shown:left-4
-        peer-placeholder-shown:top-1/2
+        peer-placeholder-shown:top-6
         peer-placeholder-shown:text-neutral-900
         peer-focus:-top-4
-        peer-focus:-left-4
+        peer-focus:-left-2
         peer-focus:text-neutral-600
         dark:peer-focus:text-neutral-300
       ">How can me Help?</label>
@@ -705,6 +699,16 @@ dark:ring-offset-neutral-800
     </section>
   </main>
   <script type="module" src="/main.js"></script>
+  <script>
+    const navBtn = document.querySelector('#menu ');
+    const menuBar = document.querySelector('[role="menubar"]');
+
+    navBtn.addEventListener('click', () => {
+      const isExpanded = JSON.parse(navBtn.getAttribute('aria-expanded'));
+      navBtn.setAttribute('aria-expanded', !isExpanded);
+      menuBar.classList.toggle('hidden');
+      menuBar.classList.toggle('flex');})
+  </script>
 </body>
 
 </html>
